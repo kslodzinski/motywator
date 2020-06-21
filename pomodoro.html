@@ -15,15 +15,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-		<link rel="stylesheet" href="css/style.css">
+		<!-- <link rel="stylesheet" href="css/style.css"> -->
+		<link rel="stylesheet" href="css/pomodoro.css">
 		
     
 	</head>
-sadas
+
 	<body>
 
 		<div class="pomodoro-page-container">
-test
+
 			<!-- navigacja, w postaci naroznych ikonek -->
 			<nav class="main-navigation">
 				<!-- do pomodoro -->
@@ -43,6 +44,47 @@ test
 					<i class="fa fa-user-circle" aria-hidden="true"></i>
 				</li>
 			</nav>
+
+			<!-- zegary i ich obsługa -->
+			<div class="top-box">
+				<!-- komunikat -->
+				<div class="display-box">
+					<p>Pozostało 20minut pracy.</p>
+				</div>
+				<!-- obsluga zegarow -->
+				<div class="customize-box">
+					<div class="work-box">
+						<h2>Praca</h2>
+						<div class="buttons-box">
+							<button type="button" class="btn-timer">+</button>
+							<button type="button" class="btn-timer">-</button>
+						</div>
+					</div>
+					<div class="break-box">
+						<h2>Przerwa</h2>
+						<div class="buttons-box">
+							<button type="button" class="btn-timer">+</button>
+							<button type="button" class="btn-timer">-</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- lista dziennych zadań do odznaczenia -->
+			<div class="bottom-box">
+				<div class="daily-checkbox">
+					<header>
+						<h2>Zrób i skreśl</h2>
+  						<input type="text" id="add-daily-task" placeholder="Zadanie do realizacji">
+  						<span onclick="" class="btn-add">+</span>
+					</header>
+					<ul id="daily-checkbox-list">
+						<li>Ćzwiczenia na powietrzu.</li>
+						<li class="checked">J. angielski.</li>
+						<li>J. Niemiecki.</li>
+						<li>Zadanie z programowania.</li>
+					  </ul>
+				</div>
+			</div>
 
 			
 		</div>

@@ -1,0 +1,64 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* navigacja, jej pozycjonowanie */
+
+.main-navigation li { list-style-type: none; font-size: 60px; padding: 15px; }
+#to-pomodoro-link { position: fixed; top: 0; right: 0; }
+#to-calendar-link { position: fixed; top: 0; left: 0; }
+#to-finance-link { position: fixed; bottom: 0; right: 0; }
+#to-login-link { position: fixed; bottom: 0; left: 0; }
+
+.pomodoro-page-container {
+    width: 100%;
+    height: 100vh;
+}
+
+/* gorna czesc */
+.top-box {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.customize-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.buttons-box {
+    display: flex;
+}
+
+.work-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.break-box {
+    width: 50%;
+    height: 16vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* dolna czesc */
+.bottom-box {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
