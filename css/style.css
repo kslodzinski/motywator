@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("../css/img/kosmos3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* cala strona */
+.full-page-container {
+    width: 100%;
+    height: 100vh;
+}
+
+/* navigacja, jej pozycjonowanie */
+
+.main-navigation li { list-style-type: none; font-size: 60px; padding: 15px; }
+#to-pomodoro-link { position: fixed; top: 0; right: 0; }
+#to-calendar-link { position: fixed; top: 0; left: 0; }
+#to-finance-link { position: fixed; bottom: 0; right: 0; }
+#to-login-link { position: fixed; bottom: 0; left: 0; }
+
+/* wyszukiwarka */
+.search-engine {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* centralny panel zadan */
+.to-do-list-panel {
+    width: 100%;
+    height: 72vh;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.one-task { 
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* panel zakladek */
+.bookmarks-panel {
+    width: 100%;
+    height: 12vh;
+    font-size: 40px;
+    position: fixed;
+    bottom: 0;
+}
+
+.bookmarks-panel ul { width: 100%; display: flex; justify-content: space-evenly; }
+
+.bookmarks-panel li { list-style-type: none; margin: 12px; }
