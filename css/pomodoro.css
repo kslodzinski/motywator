@@ -33,12 +33,14 @@
     align-items: center;
 }
 
-.buttons-box {
+.play-control-box {
+    width: 33%;
     display: flex;
+    justify-content: center;
 }
 
 .work-box {
-    width: 50%;
+    width: 33%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +48,7 @@
 }
 
 .break-box {
-    width: 50%;
+    width: 33%;
     height: 16vh;
     display: flex;
     flex-direction: column;

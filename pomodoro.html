@@ -17,7 +17,6 @@
     
 		<!-- <link rel="stylesheet" href="css/style.css"> -->
 		<link rel="stylesheet" href="css/pomodoro.css">
-		
     
 	</head>
 
@@ -49,22 +48,32 @@
 			<div class="top-box">
 				<!-- komunikat -->
 				<div class="display-box">
-					<p>Pozostało 20minut pracy.</p>
+					<p id="pomodoro-timer">Pozostało 25minut pracy.</p>
 				</div>
 				<!-- obsluga zegarow -->
 				<div class="customize-box">
 					<div class="work-box">
 						<h2>Praca</h2>
 						<div class="buttons-box">
-							<button type="button" class="btn-timer">+</button>
-							<button type="button" class="btn-timer">-</button>
+							<div class="pomodoro-input">
+								<label>Work Duration</label>
+								<input name="input-work-duration" id="input-work-duration" type="number" />
+							  </div>
 						</div>
+					</div>
+					<!-- start pauza stop -->
+					<div class="play-control-box">
+						<button id="pomodoro-start">Start</button>
+      					<button id="pomodoro-pause">Pause</button>
+      					<button id="pomodoro-stop">Stop</button>
 					</div>
 					<div class="break-box">
 						<h2>Przerwa</h2>
 						<div class="buttons-box">
-							<button type="button" class="btn-timer">+</button>
-							<button type="button" class="btn-timer">-</button>
+							<div class="pomodoro-input">
+								<label>Break Duration</label>
+								<input name="input-break-duration" id="input-break-duration" type="number" />
+          					</div>
 						</div>
 					</div>
 				</div>
@@ -93,5 +102,8 @@
 	</body>
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- jsy -->
+	<script src="js/pomodoro.js"></script>
 
 </html>
