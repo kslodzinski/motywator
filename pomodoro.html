@@ -109,16 +109,43 @@
 			<!-- lista dziennych zadań do odznaczenia -->
 			<div class="bottom-box">
 				<div class="daily-checkbox">
+					<!-- header oraz input do wpisywania zadania -->
 					<header>
-						<h2>Zrób i skreśl</h2>
-  						<input type="text" id="add-daily-task" placeholder="Zadanie do realizacji">
-  						<span onclick="" class="btn-add">+</span>
+						<form>
+							<input type="text" id="add-daily-task" placeholder="Zadanie do realizacji">
+							<span onclick="" class="btn-add">
+								<i class="fa fa-plus-circle"></i>
+							</span>
+						</form>
 					</header>
+					<!-- lista z zadaniami -->
 					<ul id="daily-checkbox-list">
-						<li>Ćzwiczenia na powietrzu.</li>
-						<li class="checked">J. angielski.</li>
-						<li>J. Niemiecki.</li>
-						<li>Zadanie z programowania.</li>
+						<div class="one-daily-task">
+							<p>Ćzwiczenia na powietrzu.</p>
+							
+								<span class="del-task-btn">
+									<i class="fa fa-trash" aria-hidden="true"></i>
+								</span>
+							
+						</div>
+						<div class="one-daily-task">
+							<p>J. angielski.</p>
+							<span class="del-task-btn">
+								<i class="fa fa-trash" aria-hidden="true"></i>
+							</span>
+						</div>
+						<div class="one-daily-task">
+							<p>J. Niemiecki.</p>
+							<span class="del-task-btn">
+								<i class="fa fa-trash" aria-hidden="true"></i>
+							</span>
+						</div>
+						<div class="one-daily-task">
+							<p>Zadanie z programowania.</p>
+							<span class="del-task-btn">
+								<i class="fa fa-trash" aria-hidden="true"></i>
+							</span>
+						</div>
 					  </ul>
 				</div>
 			</div>
