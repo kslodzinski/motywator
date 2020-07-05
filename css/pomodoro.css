@@ -37,18 +37,26 @@
     justify-content: space-evenly;
     align-items: center;
 }
-
-/* przyciski przelaczajace start/reset/stop */
-.time-toggle-btn {
-    width: 4rem;
-    height: 1.8rem;
-}
-/* przyciski przelaczajace start/reset/stop ZABLOKOWANE po starcie */
-.time-toggle-btn-special { pointer-events: none; }
-
+/* WYSWIETLACZ ZEGARA */
 #pomodoro-timer {
     font-size: 45px;
     letter-spacing: 2px;
+}
+
+/* przyciski przelaczajace start/reset/stop ZABLOKOWANE po starcie */
+.time-toggle-btn-special { pointer-events: none; }
+/* przyciski przelaczajace start/reset/stop */
+.time-toggle-controls button{
+    width: 120px;
+    height: 50%;
+    font-size: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+#session-text {
+    font-size: 20px;
+    text-align: center;
 }
 
 /* dolna czesc z manipulatorami wartosci sesji */
@@ -58,6 +66,17 @@
     border: 1px solid red;
     display: flex;
 }
+
+.break-job-time-panel button {
+    width: 120px;
+    height: 50%;
+    font-size: 40px;
+    background-color: transparent;
+    border: none;
+}
+.break-job-time-panel h2 { font-size: 26px; text-align: center; margin-bottom: 14px; }
+#break-session-value { font-size: 29px; font-weight: 700; text-align: center; }
+#work-session-value { font-size: 29px; font-weight: 700; text-align: center; }
 
 .break-job-time-panel-holder {
     width: 100%;

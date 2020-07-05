@@ -71,13 +71,6 @@ var pomodoro = {
     pomodoro.resetVariables();
   },
 
-  // wyswietlanie powiadomien
-  requestNotification: function() {
-    if (!("Notification" in window)) {
-      return console.log("This browser does not support desktop notification");
-    }
-  },
-
   // podbijanie czasu pracy
   incrSession: function() {
     if ( pomodoro.sessionLength < 59 ) {
@@ -222,11 +215,11 @@ var pomodoro = {
   stopCountdown: function() {
     // stop
     clearInterval(pomodoro.timeInterval);
-    pomodoro.sessionText.innerHTML = ('Zatrzymano');
+    pomodoro.sessionText.innerHTML = ('Zatrzymano.');
   },
 
   playSound: function() {
-    var mp3 = "http://soundbible.com/grab.php?id=1746&type=mp3";
+    var mp3 = "https://freesound.org/people/esperar/sounds/171151/download/171151__esperar__sheep-2.mp3";
     var audio = new Audio(mp3);
     audio.play();    
   },

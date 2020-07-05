@@ -54,14 +54,19 @@
 					</div>
 					<!-- kontrolki start -->
 					<div class="time-toggle-controls">
-						<button type="button" id="start-btn">START</button>
-						<button type="button" id="stop-btn">STOP</button>
-						<button type="button" id="reset-btn">RESET</button>
+						<button type="button" id="start-btn">
+							<i class="fa fa-play-circle"></i>
+						</button>
+						<button type="button" id="stop-btn">
+							<i class="fa fa-pause-circle"></i>
+						</button>
+						<button type="button" id="reset-btn">
+							<i class="fa fa-history"></i>
+						</button>
 					</div>
 					<!-- komunikat o obecnej sesji -->
 					<div class="session-notification">
-						<p id="session-text">Obecnie nie trwa żadna sesja.
-							<br>Naciśnij start by rozpocząć.</p>
+						<p id="session-text">Naciśnij start by rozpocząć nową sesje.</p>
 					</div>
 				</div>
 				<!-- panel do kontroli dlugosci sekcji -->
@@ -72,8 +77,12 @@
 							<h2>CZAS PRZERWY</h2>
 							<!-- pojemnik na przyciski + / - -->
 							<div class="buttons-div">
-								<button type="button" class="add-minus-btn time-toggle-btn" id="add-min-break">+</button>
-								<button type="button" class="add-minus-btn time-toggle-btn" id="minus-min-break">-</button>
+								<button type="button" class="add-minus-btn time-toggle-btn" id="add-min-break">
+									<i class="fa fa-plus-circle"></i>
+								</button>
+								<button type="button" class="add-minus-btn time-toggle-btn" id="minus-min-break">
+									<i class="fa fa-minus-circle"></i>
+								</button>
 							</div>
 							<!-- informacja o wybranej wartosci przerwy -->
 							<p id="break-session-value">25 minut</p>
@@ -83,8 +92,12 @@
 							<h2>CZAS PRACY</h2>
 							<!-- pojemnik na przyciski + / - -->
 							<div class="buttons-div">
-								<button type="button" class="add-minus-btn time-toggle-btn" id="add-min-work">+</button>
-								<button type="button" class="add-minus-btn time-toggle-btn" id="minus-min-work">-</button>
+								<button type="button" class="add-minus-btn time-toggle-btn" id="add-min-work">
+									<i class="fa fa-plus-circle"></i>
+								</button>
+								<button type="button" class="add-minus-btn time-toggle-btn" id="minus-min-work">
+									<i class="fa fa-minus-circle"></i>
+								</button>
 							</div>
 							<!-- informacja o wybranej wartosci przerwy -->
 							<p id="work-session-value">25 minut</p>
