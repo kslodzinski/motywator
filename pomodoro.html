@@ -47,20 +47,20 @@
 			<!-- zegary i ich obsługa -->
 			<div class="top-box">
 				<!-- gorna czesc - zegary i przyciski start / pauza / stop oraz komuniat -->
-				<div class="time-display-container">
+				<div id="time-display-container">
 					<!-- sam wyswietlacz -->
 					<div class="time-display">
 						<p id="pomodoro-timer">25:00</p>
 					</div>
 					<!-- kontrolki start -->
 					<div class="time-toggle-controls">
-						<button type="button" class="time-toggle-btn" id="start-btn">START</button>
-						<button type="button" class="time-toggle-btn" id="pausa-btn">PAUZA</button>
-						<button type="button" class="time-toggle-btn" id="reset-btn">RESET</button>
+						<button type="button" id="start-btn">START</button>
+						<button type="button" id="stop-btn">STOP</button>
+						<button type="button" id="reset-btn">RESET</button>
 					</div>
 					<!-- komunikat o obecnej sesji -->
 					<div class="session-notification">
-						<p id="session-notification">Obecnie nie trwa żadna sesja.
+						<p id="session-text">Obecnie nie trwa żadna sesja.
 							<br>Naciśnij start by rozpocząć.</p>
 					</div>
 				</div>
@@ -72,8 +72,8 @@
 							<h2>CZAS PRZERWY</h2>
 							<!-- pojemnik na przyciski + / - -->
 							<div class="buttons-div">
-								<button type="button" class="add-minus-btn" id="add-min-break">+</button>
-								<button type="button" class="add-minus-btn" id="minus-min-break">-</button>
+								<button type="button" class="add-minus-btn time-toggle-btn" id="add-min-break">+</button>
+								<button type="button" class="add-minus-btn time-toggle-btn" id="minus-min-break">-</button>
 							</div>
 							<!-- informacja o wybranej wartosci przerwy -->
 							<p id="break-session-value">25 minut</p>
@@ -83,8 +83,8 @@
 							<h2>CZAS PRACY</h2>
 							<!-- pojemnik na przyciski + / - -->
 							<div class="buttons-div">
-								<button type="button" class="add-minus-btn" id="add-min-work">+</button>
-								<button type="button" class="add-minus-btn" id="minus-min-work">-</button>
+								<button type="button" class="add-minus-btn time-toggle-btn" id="add-min-work">+</button>
+								<button type="button" class="add-minus-btn time-toggle-btn" id="minus-min-work">-</button>
 							</div>
 							<!-- informacja o wybranej wartosci przerwy -->
 							<p id="work-session-value">25 minut</p>

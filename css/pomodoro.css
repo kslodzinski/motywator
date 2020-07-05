@@ -28,7 +28,7 @@
 }
 
 /* czesc z wyswietlaczem i kontrola dzialania */
-.time-display-container {
+#time-display-container {
     width: 70%;
     height: 40%;
     border: 1px solid red;
@@ -37,6 +37,14 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* przyciski przelaczajace start/reset/stop */
+.time-toggle-btn {
+    width: 4rem;
+    height: 1.8rem;
+}
+/* przyciski przelaczajace start/reset/stop ZABLOKOWANE po starcie */
+.time-toggle-btn-special { pointer-events: none; }
 
 #pomodoro-timer {
     font-size: 45px;
@@ -84,3 +92,4 @@
     align-items: center;
     border-top: 1px solid red;
 }
+
