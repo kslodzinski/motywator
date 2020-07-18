@@ -24,6 +24,8 @@ function newElement() {
   const li = document.createElement("li");
   let inputValue = document.getElementById("input-task-text").value;
   const t = document.createTextNode(inputValue);
+  localStorage.setItem(inputValue, inputValue.length);
+  console.log(localStorage)
   li.appendChild(t);
   if (inputValue === "") {
     alert("You must write somethin");

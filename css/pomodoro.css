@@ -1,128 +1,223 @@
 * {
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/*
+font-family: 'Lato', sans-serif;
+
+font-family: 'Monoton', cursive;
+
+font-family: 'Montserrat', sans-serif;
+
+font-family: 'Poppins', sans-serif;
+
+font-family: 'PT Sans Narrow', sans-serif;
+
+font-family: 'Roboto', sans-serif;
+
+font-family: 'Ubuntu', sans-serif;
+*/
 
 /* navigacja, jej pozycjonowanie */
 
-.main-navigation li { list-style-type: none; font-size: 60px; padding: 15px; }
-#to-pomodoro-link { position: fixed; top: 0; right: 0; }
-#to-calendar-link { position: fixed; top: 0; left: 0; }
-#to-finance-link { position: fixed; bottom: 0; right: 0; }
-#to-login-link { position: fixed; bottom: 0; left: 0; }
+.main-navigation li {
+  list-style-type: none;
+  font-size: 60px;
+  padding: 15px;
+}
+#to-pomodoro-link {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+#to-calendar-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#to-finance-link {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+#to-login-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
 
 .pomodoro-page-container {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100%;
+  background: url(img/zwartevilt_@2X.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
 }
 
 /* gorna czesc */
 .top-box {
-    height: 50%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  height: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /* czesc z wyswietlaczem i kontrola dzialania */
 #time-display-container {
-    width: 70%;
-    height: 40%;
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  width: 70%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background:rgba(0,0,0,0.13);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border: 2.6px solid rgba(68, 167, 68, 0.774);
+  border-radius: 25px;
+
 }
 /* WYSWIETLACZ ZEGARA */
 #pomodoro-timer {
-    font-size: 45px;
-    letter-spacing: 2px;
+  font-size: 75px;
+  letter-spacing: 2px;
+  font-family: 'Monoton';
+  font-weight: 700;
 }
 
 /* przyciski przelaczajace start/reset/stop ZABLOKOWANE po starcie */
-.time-toggle-btn-special { pointer-events: none; }
+.time-toggle-btn-special {
+  pointer-events: none;
+}
 /* przyciski przelaczajace start/reset/stop */
-.time-toggle-controls button{
-    width: 120px;
-    height: 50%;
-    font-size: 40px;
-    background-color: transparent;
-    border: none;
+.time-toggle-controls button {
+  width: 120px;
+  height: 50%;
+  font-size: 60px;
+  background-color: transparent;
+  border: none;
+  color: white;
 }
 
+.time-toggle-controls button:hover { outline: none; cursor: pointer; }
+
 #session-text {
-    font-size: 20px;
-    text-align: center;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }
 
 /* dolna czesc z manipulatorami wartosci sesji */
 .break-job-time-panel {
-    width: 70%;
-    height: 40%;
-    border: 1px solid red;
-    display: flex;
+  width: 70%;
+  height: 40%;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border: 2.6px solid rgba(68, 167, 68, 0.774);
+  border-radius: 25px;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .break-job-time-panel button {
-    width: 120px;
-    height: 50%;
-    font-size: 40px;
-    background-color: transparent;
-    border: none;
+  width: 120px;
+  height: 50%;
+  font-size: 60px;
+  background-color: transparent;
+  border: none;
+  color: white;
 }
-.break-job-time-panel h2 { font-size: 26px; text-align: center; margin-bottom: 14px; }
-#break-session-value { font-size: 29px; font-weight: 700; text-align: center; }
-#work-session-value { font-size: 29px; font-weight: 700; text-align: center; }
+.break-job-time-panel h2 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+#break-session-value {
+  font-size: 29px;
+  font-weight: 700;
+  text-align: center;
+}
+#work-session-value {
+  font-size: 29px;
+  font-weight: 700;
+  text-align: center;
+}
 
 .break-job-time-panel-holder {
-    width: 100%;
-    border: 1px solid red;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
 
 /* lewa czesc - przerwa */
 .break-section {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* prawa czesc - praca */
 .work-section {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* dolna czesc */
 .bottom-box {
-    height: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid red;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid red;
 }
 
 /* gorna czesc headeer + dodawanie */
 .daily-checkbox header {
-    width: 620px;
-    height: 165px;
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 620px;
+  height: 165px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* panel / lista z zadaniami */
 #daily-checkbox-list {
 }
+
+
+/* media queries */
+@media screen and (max-width: 1600px) and (min-width: 1200px) {
+  .main-navigation li { font-size: 48px; }
+} 
+
+@media screen and (max-width: 1200px) and (min-width: 800px) {
+  .main-navigation li { font-size: 48px; }
+} 
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  .main-navigation li { font-size: 48px; }
+} 
+
+@media screen and (max-width: 600px) and (min-width: 450px) {
+  .main-navigation li { font-size: 48px; }
+} 
+
+@media screen and (max-width: 450px) and (min-width: 320px) {
+  .main-navigation li { font-size: 48px; }
+} 
+
+@media screen and (max-width: 320px) and (min-width: 100px) {
+  .main-navigation li { font-size: 48px; }
+} 
