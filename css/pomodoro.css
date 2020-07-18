@@ -115,45 +115,14 @@
 /* gorna czesc headeer + dodawanie */
 .daily-checkbox header {
     width: 620px;
-    height: 65px;
+    height: 165px;
     border: 1px solid red;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.daily-checkbox header i { font-size: 40px; margin-left: 18px; }
-
-.daily-checkbox header form {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.daily-checkbox header form input{
-    width: 300px;
-    height: 42px;
-    text-align: center;
-    font-size: 18px;
-    text-transform: uppercase;
-}
 /* panel / lista z zadaniami */
 #daily-checkbox-list {
-    
 }
-
-.one-daily-task {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 620px;
-    height: 65px;
-    border: 1px solid red;
-}
-
-.one-daily-task p {
-    width: 90%;
-    display: flex;
-    align-items: center;
-}
-
-
