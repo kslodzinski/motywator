@@ -1,5 +1,9 @@
 var myList = document.getElementsByClassName("one-task");
+var myListNr = 2;
 var i;
+const taskAddBtn = document.querySelector('.add-task-btn');
+const taskText = document.querySelector('#input-task-text');
+var myListPanel = document.querySelector('#daily-task-list');
 
 for (i = 0; i < myList.length; i++) {
   const span = document.createElement("SPAN");
@@ -20,31 +24,22 @@ for (i = 0; i < close.length; i++) {
 }
 
 // dodawanie nowego elementu
-function newElement() {
-  const li = document.createElement("li");
-  let inputValue = document.getElementById("input-task-text").value;
-  const t = document.createTextNode(inputValue);
-  localStorage.setItem(inputValue, inputValue.length);
-  console.log(localStorage)
-  li.appendChild(t);
-  if (inputValue === "") {
-    alert("You must write somethin");
-  } else {
-    document.getElementById("daily-task-list").appendChild(li);
+taskAddBtn.onclick = function () {
+  const taskKey = myListNr;
+  myListNr++;
+  const textValue = taskText.value;
+
+  console.log(taskKey);
+  console.log(textValue);
+
+  if ( taskKey && textValue ) {
+    localStorage.setItem(taskKey, textValue);
   }
-  document.getElementById("input-task-text").value = "";
+};
 
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close-task-span";
-  span.appendChild(txt);
-  li.appendChild(span);
+for ( i = 0; i < localStorage.length; i++) {
+  const taskKey = localStorage.key(i);
+  const textValue = localStorage.getItem(taskKey);
 
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-
+  myListPanel.innerHTML +=`${textValue}<br />`;
 }
