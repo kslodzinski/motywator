@@ -1,10 +1,14 @@
-var myList = document.getElementsByClassName("one-task");
-var myListNr = 2;
-var i;
-const taskAddBtn = document.querySelector('.add-task-btn');
-const taskText = document.querySelector('#input-task-text');
-var myListPanel = document.querySelector('#daily-task-list');
+var myList = document.getElementsByClassName("one-task"); //jedno zadanie (li)
 
+const taskAddBtn = document.querySelector('.add-task-btn');
+const taskText = document.querySelector('#input-task-text'); //tutaj mam wartosc z inputa 
+var myListPanel = document.querySelector('#daily-task-list'); // to jest cala lista (UL)
+
+var close = document.getElementsByClassName("close-task-span");
+var i; // zmienna pomocnicza dla calego skryptu
+var myListNr = 1;
+
+// dodaje span zamykajact zadanie
 for (i = 0; i < myList.length; i++) {
   const span = document.createElement("SPAN");
   const spanTxt = document.createTextNode("\u00D7");
@@ -14,8 +18,6 @@ for (i = 0; i < myList.length; i++) {
 }
 
 // zamykanie zadania
-var close = document.getElementsByClassName("close-task-span");
-var i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function () {
     var div = this.parentElement;

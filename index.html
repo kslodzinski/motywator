@@ -54,22 +54,44 @@
 
 			<!-- todo list z matrycami pomysłu Eisenhovera -->
 			<div class="to-do-list-panel">
-				<!-- tymczasowo wklejone zadania, wypelniacz -->
-				<div class="one-task" style="background-color: rgba(8, 136, 196, 0.788)";>
-					<p id="task1" class="task"></p>
-					<span class="edit-task-btn" ><i class="fa fa-edit"></i></span>
+				<!-- wybor obecnie wyswietlanej kategorii -->
+				<div class="category">
+					<div class="urgent-viev">URGENT TASK</div>
+					<div class="important-viev">IMPORTANT</div>
+					<div class="others-viev">OTHER THINGS</div>
 				</div>
-				<div class="one-task" style="background-color: rgba(42, 167, 150, 0.788)";>
-					<p id="task2" class="task"></p>
-					<span class="edit-task-btn" ><i class="fa fa-edit"></i></span>
+				<!-- formularz dodawania zadania -->
+				<form class="to-do-list-form">
+					<input type="text" class="to-do-list-text-input" placeholder="Type something important to do">
+					<span class="add-to-do-btn">+++</span>
+				</form>
+				<!-- LISTY UKRYTE DOMYSLNIE ? PRZELACZANE SWITCHEM -->
+				<!-- PIERWSZY PRIORYTETT - PILNE -->
+				<div class="list list-urgent">
+					<li>
+						First Task to do
+					</li>
+					<li>
+						First Task to do
+					</li>
 				</div>
-				<div class="one-task" style="background-color: rgba(97, 153, 33, 0.692)";>
-					<p id="task3" class="task"></p>
-					<span class="edit-task-btn" ><i class="fa fa-edit"></i></i></span>
+				<!-- DRUGI PRIORYTET - WAZNE -->
+				<div class="list list-important">
+					<li>
+						Second task to do
+					</li>
+					<li>
+						Second task to do
+					</li>
 				</div>
-				<div class="one-task" style="background-color: rgba(89, 94, 83, 0.692)";>
-					<p id="task4" class="task"></p>
-					<span class="edit-task-btn" ><i class="fa fa-edit"></i></span>
+				<!-- INNE ZADANIA -->
+				<div class="list list-others">
+					<li>
+						Third task to do
+					</li>
+					<li>
+						Third task to do
+					</li>
 				</div>
 			</div>
 
