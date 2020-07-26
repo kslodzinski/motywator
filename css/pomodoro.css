@@ -194,8 +194,14 @@ font-family: 'Ubuntu', sans-serif;
 
 /* panel / lista z zadaniami */
 #daily-checkbox-list {
+  width: 1000px;
 }
 
+.error {
+  display: none;
+}
+
+.show { display: flex; }
 
 /* media queries */
 @media screen and (max-width: 1600px) and (min-width: 1200px) {

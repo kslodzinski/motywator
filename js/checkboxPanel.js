@@ -1,47 +1,65 @@
-var myList = document.getElementsByClassName("one-task"); //jedno zadanie (li)
+const form = document.querySelector('#daily-task-form'); //formularz doddawania
+const item = document.querySelector('#input-task-text'); // wartosc tekstowa z inputa
+const sumbit = document.querySelector('.add-task-btn'); // przycisk dodaj
+const lists = document.querySelector('#daily-task-list'); // cala lista ul
+const clear = document.querySelector('#clear-tasks-btn'); // przycisk kasujacy cala liste
+const error = document.querySelector('.error'); // komunikat o bledzie domyslnie niewidoczny
+let listItems = localStorage.getItem('items')?JSON.parse(localStorage.getItem('items')):[];
+const trash = document.getElementById('trash');
 
-const taskAddBtn = document.querySelector('.add-task-btn');
-const taskText = document.querySelector('#input-task-text'); //tutaj mam wartosc z inputa 
-var myListPanel = document.querySelector('#daily-task-list'); // to jest cala lista (UL)
+localStorage.setItem('items',JSON.stringify(listItems));
+let data = JSON.parse(localStorage.getItem('items'));
 
-var close = document.getElementsByClassName("close-task-span");
-var i; // zmienna pomocnicza dla calego skryptu
-var myListNr = 1;
 
-// dodaje span zamykajact zadanie
-for (i = 0; i < myList.length; i++) {
-  const span = document.createElement("SPAN");
-  const spanTxt = document.createTextNode("\u00D7");
-  span.className = "close-task-span";
-  span.appendChild(spanTxt);
-  myList[i].appendChild(span);
+// Functions
+
+const listMaker = text =>{
+    const li = document.createElement('li');
+    const span = document.createElement('span');
+    span.innerHTML = '<i id="trash" class="fa fa-trash trash"></i>';
+    li.textContent = text;
+    li.appendChild(span);
+    lists.appendChild(li);
+    location.reload()
 }
 
-// zamykanie zadania
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function () {
-    var div = this.parentElement;
-    div.style.display = "none";
-  };
+function checkInput(e){
+    e.preventDefault();
+    if(item.value.trim()===""){
+        error.classList.add('show')
+    }
+    else{
+        error.classList.remove('show');
+        listItems.push(item.value)
+        localStorage.setItem('items',JSON.stringify(listItems))
+        listMaker(item.value);
+        item.value = '';
+    }
 }
 
-// dodawanie nowego elementu
-taskAddBtn.onclick = function () {
-  const taskKey = myListNr;
-  myListNr++;
-  const textValue = taskText.value;
+data.forEach(e=>{
+    const li = document.createElement('li');
+    const span = document.createElement('span');
+    span.innerHTML = '<i id="trash" class="fa fa-trash trash"></i>';
+    li.textContent = e;
+    li.appendChild(span);
+    lists.appendChild(li);
 
-  console.log(taskKey);
-  console.log(textValue);
+    span.addEventListener('click',e=>{
+        if(e.target.classList.contains('trash')){
+            let text = e.target.parentElement.parentElement.textContent;
+            listItems.splice(listItems.indexOf(text),1);
+            localStorage.setItem('items',JSON.stringify(listItems));
+            li.remove();
+            location.reload()
+        }
+    })
+})
 
-  if ( taskKey && textValue ) {
-    localStorage.setItem(taskKey, textValue);
-  }
-};
-
-for ( i = 0; i < localStorage.length; i++) {
-  const taskKey = localStorage.key(i);
-  const textValue = localStorage.getItem(taskKey);
-
-  myListPanel.innerHTML +=`${textValue}<br />`;
+function clearAll(){
+    localStorage.clear()
+    location.reload()
 }
+// preventing the page from refreshing when the form is submitted
+form.addEventListener('submit',checkInput);
+clear.addEventListener('click',clearAll);
