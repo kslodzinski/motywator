@@ -28,7 +28,9 @@
 			<nav class="main-navigation">
 				<!-- do pomodoro -->
 				<li id="to-pomodoro-link">
-					<i class="fa fa-clock-o" aria-hidden="true"></i>
+					<a href="pomodoro.html">
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+					</a>
 				</li>
 				<!-- do kalendarza -->
 				<li id="to-calendar-link">
@@ -54,45 +56,58 @@
 
 			<!-- todo list z matrycami pomysłu Eisenhovera -->
 			<div class="to-do-list-panel">
-				<!-- wybor obecnie wyswietlanej kategorii -->
-				<div class="category">
-					<div class="urgent-viev">URGENT TASK</div>
-					<div class="important-viev">IMPORTANT</div>
-					<div class="others-viev">OTHER THINGS</div>
-				</div>
-				<!-- formularz dodawania zadania -->
+				<!-- formularz dodawania zadania  domyslnie yukryty -->
 				<form class="to-do-list-form">
 					<input type="text" class="to-do-list-text-input" placeholder="Type something important to do">
 					<span class="add-to-do-btn">+++</span>
 				</form>
-				<!-- LISTY UKRYTE DOMYSLNIE ? PRZELACZANE SWITCHEM -->
-				<!-- PIERWSZY PRIORYTETT - PILNE -->
-				<div class="list list-urgent">
-					<li>
-						First Task to do
-					</li>
-					<li>
-						First Task to do
-					</li>
+				<!-- wybor obecnie wyswietlanej kategorii -->
+				<div class="category">
+					<div class="urgent-viev">
+						<button type="button" class="list-switch-btn" id="urgent-btn">Urgent</button>
+					</div>
+					<div class="important-viev">
+						<button type="button" class="list-switch-btn" id="important-btn">Important</button>
+					</div>
+					<div class="others-viev">
+						<button type="button" class="list-switch-btn" id="others-btn">Other things</button>
+					</div>
 				</div>
-				<!-- DRUGI PRIORYTET - WAZNE -->
-				<div class="list list-important">
-					<li>
-						Second task to do
-					</li>
-					<li>
-						Second task to do
-					</li>
+				
+				<div class="list-holder">
+					<!-- LISTY UKRYTE DOMYSLNIE ? PRZELACZANE SWITCHEM -->
+					<!-- PIERWSZY PRIORYTETT - PILNE -->
+					<div class="list list-urgent">
+						<li>
+							First Task to do
+						</li>
+						<li>
+							First Task to do
+						</li>
+					</div>
+					<!-- DRUGI PRIORYTET - WAZNE -->
+					<div class="list list-important">
+						<li>
+							Second task to do
+						</li>
+						<li>
+							Second task to do
+						</li>
+					</div>
+					<!-- INNE ZADANIA -->
+					<div class="list list-others">
+						<li>
+							Third task to do
+						</li>
+						<li>
+							Third task to do
+						</li>
+					</div>
 				</div>
-				<!-- INNE ZADANIA -->
-				<div class="list list-others">
-					<li>
-						Third task to do
-					</li>
-					<li>
-						Third task to do
-					</li>
-				</div>
+				<!-- przycisk do wlaczania modalaa obslugujacego dodawanie zadania -->
+				<button type="submit" class="open-task-modal">
+					<h5>Otwórz i dodaj zadanie!</h5>
+				</button>
 			</div>
 
 			<!-- panel zakladek, tymczasowo wypelniony -->
@@ -131,5 +146,6 @@
 	</body>
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/eisenhoverLists.js"></script>
 
 </html>

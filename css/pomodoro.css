@@ -17,12 +17,15 @@ font-family: 'Roboto', sans-serif;
 */
 
 /* navigacja, jej pozycjonowanie */
+button, input { outline: none; }
 
 .main-navigation li {
   list-style-type: none;
   font-size: 60px;
   padding: 15px;
 }
+
+.main-navigation li a { text-decoration: none; }
 #to-pomodoro-link {
   position: fixed;
   top: 0;

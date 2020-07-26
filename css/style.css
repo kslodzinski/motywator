@@ -17,9 +17,14 @@ body, html {
     height: 100vh;
 }
 
+.f-p-g-after {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url("../css/img/kosmos3.jpg");
+}
+
 /* navigacja, jej pozycjonowanie */
 
 .main-navigation li { list-style-type: none; font-size: 50px; padding: 15px; }
+.main-navigation li a { text-decoration: none; }
 #to-pomodoro-link { position: fixed; top: 0; right: 0; }
 #to-calendar-link { position: fixed; top: 0; left: 0; }
 #to-finance-link { position: fixed; bottom: 0; right: 0; }
@@ -58,8 +63,10 @@ body, html {
 /* formularz dodawania zadan / domyslnie yukryty , odpala modal po nacisnienu guzika */
 .to-do-list-form {
     border: 1px solid red;
-    width: 760px;
-    height: 60px;
+    background-color: rgba(11, 11, 12, 0.9);
+    width: 92%;
+    height: 68%;
+    position: fixed;
     display: none;
     align-items: center;
     justify-content: center;
@@ -72,8 +79,15 @@ body, html {
     min-height: 300px;
 }
 
+/* pojemnik na listy / pusty z komunikatem domyslnie */
+.list-holder {
+    min-height: 350px;
+    border: 1px solid red;
+    width: 760px;
+}
+
 /* pilne - widoczne domyslnie */
-.list-urgent {}
+.list-urgent {  }
 
 /* wazne - domyslnie ukrtte */
 .list-important {
@@ -83,6 +97,11 @@ body, html {
 /* inne - domyslnei ukryte  */
 .list-others {
     display: none;
+}
+
+.open-task-modal {
+    width: 400px;
+    height: 80px;
 }
 /* panel zakladek */
 .bookmarks-panel {
