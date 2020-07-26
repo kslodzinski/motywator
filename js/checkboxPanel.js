@@ -3,7 +3,6 @@ const item = document.querySelector('#input-task-text'); // wartosc tekstowa z i
 const sumbit = document.querySelector('.add-task-btn'); // przycisk dodaj
 const lists = document.querySelector('#daily-task-list'); // cala lista ul
 const clear = document.querySelector('#clear-tasks-btn'); // przycisk kasujacy cala liste
-const error = document.querySelector('.error'); // komunikat o bledzie domyslnie niewidoczny
 let listItems = localStorage.getItem('items')?JSON.parse(localStorage.getItem('items')):[];
 const trash = document.getElementById('trash');
 
@@ -26,7 +25,7 @@ const listMaker = text =>{
 function checkInput(e){
     e.preventDefault();
     if(item.value.trim()===""){
-        error.classList.add('show')
+      window.alert('Najpierw wprowadź zadanie do wykonania.' )
     }
     else{
         error.classList.remove('show');

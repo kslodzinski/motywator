@@ -178,14 +178,28 @@ font-family: 'Ubuntu', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid red;
+}
+
+/* caly pojemnik na panel zadan */
+.daily-checkbox {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border: 2.6px solid rgba(68, 167, 68, 0.774);
+  border-radius: 25px;
 }
 
 /* gorna czesc headeer + dodawanie */
 .daily-checkbox header {
-  width: 620px;
+  width: 65%;
   height: 165px;
-  border: 1px solid red;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border: 2.6px solid rgba(68, 167, 68, 0.774);
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -193,15 +207,37 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 /* panel / lista z zadaniami */
-#daily-checkbox-list {
-  width: 1000px;
+#daily-task-list { 
+  width: 100%;
 }
 
-.error {
-  display: none;
+#daily-task-list li { 
+  width: 100%;
+  height: 86px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.show { display: flex; }
+#daily-task-list li { padding-left: 30px; font-size: 26px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight: bold;}
+#daily-task-list li i { margin-right: 30px; font-size: 38px; }
+
+#daily-task-form { width: 100%; height: 65px; display: flex; justify-content: center; }
+
+#input-task-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  width: 65%;
+}
+
+
+#clear-tasks-btn { margin-bottom: 30px; width: 30%; padding: 10px; font-size: 24px; font-family: 'Montserrat', sans-serif;
+  font-weight: bold;}
 
 /* media queries */
 @media screen and (max-width: 1600px) and (min-width: 1200px) {
