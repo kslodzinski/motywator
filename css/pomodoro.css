@@ -13,11 +13,7 @@ font-family: 'Montserrat', sans-serif;
 
 font-family: 'Poppins', sans-serif;
 
-font-family: 'PT Sans Narrow', sans-serif;
-
 font-family: 'Roboto', sans-serif;
-
-font-family: 'Ubuntu', sans-serif;
 */
 
 /* navigacja, jej pozycjonowanie */
@@ -77,17 +73,16 @@ font-family: 'Ubuntu', sans-serif;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background:rgba(0,0,0,0.13);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  background: rgba(0, 0, 0, 0.13);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   border: 2.6px solid rgba(68, 167, 68, 0.774);
   border-radius: 25px;
-
 }
 /* WYSWIETLACZ ZEGARA */
 #pomodoro-timer {
   font-size: 75px;
   letter-spacing: 2px;
-  font-family: 'Monoton';
+  font-family: "Monoton";
   font-weight: 700;
 }
 
@@ -105,11 +100,14 @@ font-family: 'Ubuntu', sans-serif;
   color: white;
 }
 
-.time-toggle-controls button:hover { outline: none; cursor: pointer; }
+.time-toggle-controls button:hover {
+  outline: none;
+  cursor: pointer;
+}
 
 #session-text {
   font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
 }
 
@@ -117,11 +115,11 @@ font-family: 'Ubuntu', sans-serif;
 .break-job-time-panel {
   width: 70%;
   height: 40%;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   border: 2.6px solid rgba(68, 167, 68, 0.774);
   border-radius: 25px;
   display: flex;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .break-job-time-panel button {
@@ -173,7 +171,9 @@ font-family: 'Ubuntu', sans-serif;
 
 /* dolna czesc */
 .bottom-box {
-  height: 600px;
+  min-height: 600px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -186,7 +186,7 @@ font-family: 'Ubuntu', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   border: 2.6px solid rgba(68, 167, 68, 0.774);
   border-radius: 25px;
 }
@@ -197,7 +197,7 @@ font-family: 'Ubuntu', sans-serif;
   height: 165px;
   margin-top: 35px;
   margin-bottom: 15px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   border: 2.6px solid rgba(68, 167, 68, 0.774);
   border-radius: 25px;
   display: flex;
@@ -207,59 +207,195 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 /* panel / lista z zadaniami */
-#daily-task-list { 
+#daily-task-list {
   width: 100%;
 }
 
-#daily-task-list li { 
+#daily-task-list li {
   width: 100%;
   height: 86px;
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-#daily-task-list li { padding-left: 30px; font-size: 26px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight: bold;}
-#daily-task-list li i { margin-right: 30px; font-size: 38px; }
-
-#daily-task-form { width: 100%; height: 65px; display: flex; justify-content: center; }
-
-#input-task-text {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  color: black;
-  text-align: center;
+#daily-task-list li {
+  padding-left: 30px;
+  font-size: 26px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
-  font-size: 24px;
-  width: 65%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
+#daily-task-list li div {
+  font-size: 38px;
+  width: 12%;
+  margin-left: auto;
+}
 
-#clear-tasks-btn { margin-bottom: 30px; width: 30%; padding: 10px; font-size: 24px; font-family: 'Montserrat', sans-serif;
-  font-weight: bold;}
+#daily-task-list li div span { margin: 10px; }
+
+/* formularz */
+#daily-task-form {
+  width: 80%;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border: 2.6px solid rgba(68, 167, 68, 0.774);
+  border-radius: 12px;
+}
+
+#input-task-text {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.9px;
+  background-color: transparent;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 26px;
+  width: 85%;
+  border: none;
+}
+
+#task-is-done {
+  margin-right: 30px;
+  font-size: 38px;
+}
+
+.add-task-btn {
+  width: 120px;
+  font-size: 60px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  display: flex; justify-content: center; align-items: center;
+}
+
+#clear-tasks-btn {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 10px;
+  font-size: 26px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.89px;
+}
 
 /* media queries */
 @media screen and (max-width: 1600px) and (min-width: 1200px) {
-  .main-navigation li { font-size: 48px; }
-} 
+
+  .main-navigation li {
+    font-size: 48px;
+  }
+}
 
 @media screen and (max-width: 1200px) and (min-width: 800px) {
-  .main-navigation li { font-size: 48px; }
-} 
+  #input-task-text { font-size: 18px; }
+  #daily-task-list li div { font-size: 34px; width: 18%; margin-left: auto;}
+  #daily-task-list li { font-size: 20px; width: auto; }
+  .add-task-btn i{ font-size: 42px; }
+  #clear-tasks-btn { padding: 6px; font-size: 22px; }
+  
+  .main-navigation li {
+    font-size: 48px;
+  }
+  
+}
 
 @media screen and (max-width: 800px) and (min-width: 600px) {
-  .main-navigation li { font-size: 48px; }
-} 
+  .main-navigation li {
+    font-size: 30px;
+  }
+  /* gorna czesc */
+  .top-box { height: 100%; padding-top: 80px; padding-bottom: 20px; }
+  #time-display-container { margin-bottom: 40px;}
+  #time-display-container i { font-size: 40px;}
+  #pomodoro-timer { font-size: 55px; padding-top: 16px; }
+  #session-text { font-size: 16px; padding-top: 16px; padding-bottom: 10px;}
+  .break-job-time-panel { height: auto; width: auto; }
+  .break-job-time-panel-holder { height: 250px; }
+  .break-job-time-panel h2 { font-size:  20px; padding-top: 10px; }
+  .break-job-time-panel i { font-size: 36px; }
+  /* dolna czesc */
+  .daily-checkbox header { height: 150px; width: 85%; }
+  #input-task-text { font-size: 16px; }
+  #daily-task-list li div { font-size: 28px; width: 18%; margin-left: auto;}
+  #daily-task-list li { font-size: 16px; width: auto; }
+  #daily-task-list li div span { margin: 3px; }
+  .add-task-btn i{ font-size: 36px; }
+  #clear-tasks-btn { padding: 3px; font-size: 20px; }
+}
 
 @media screen and (max-width: 600px) and (min-width: 450px) {
-  .main-navigation li { font-size: 48px; }
-} 
+  .main-navigation li {
+    font-size: 38px;
+  }
+  /* gorna czesc */
+  .top-box { height: 100%; padding-top: 80px; padding-bottom: 20px; }
+  #time-display-container { margin-bottom: 40px;}
+  #time-display-container i { font-size: 40px;}
+  #pomodoro-timer { font-size: 55px; padding-top: 16px; }
+  #session-text { font-size: 16px; padding-top: 16px; padding-bottom: 10px;}
+  .break-job-time-panel { height: auto; width: auto; }
+  .break-job-time-panel-holder { height: 250px; }
+  .break-job-time-panel h2 { font-size:  20px; padding-top: 10px; }
+  .break-job-time-panel i { font-size: 36px; }
+  /* dolna czesc */
+  .daily-checkbox { min-height: 400px; width:82%; }
+  .daily-checkbox header { height: 150px; width: 85%; }
+  #input-task-text { font-size: 12px; }
+  #daily-task-list li div { font-size: 19px; width: 16%; margin-left: auto;}
+  #daily-task-list li div span { margin: 6px; }
+  #daily-task-list li { font-size: 14px; font-weight: 500; width: auto; }
+  .add-task-btn i{ font-size: 26px; }
+  #clear-tasks-btn { padding: 1px; font-size: 15px; }
+}
+
+
+/* ODTAD DO POPRAWY KOD W DOL */
 
 @media screen and (max-width: 450px) and (min-width: 320px) {
-  .main-navigation li { font-size: 48px; }
-} 
+  .main-navigation li {
+    font-size: 38px;
+  }
+  /* gorna czesc */
+  .top-box { height: 100%; padding-top: 80px; padding-bottom: 20px; }
+  #time-display-container { margin-bottom: 40px; height: auto; width: auto; }
+  #time-display-container i { font-size: 40px;}
+  #pomodoro-timer { font-size: 55px; padding-top: 16px; }
+  #session-text { font-size: 16px; padding-top: 16px; padding-bottom: 10px;}
+  .break-job-time-panel { height: auto; width: auto; }
+  .break-job-time-panel-holder { height: auto; width: auto; }
+  .buttons-holder { }
+  .break-job-time-panel h2 { font-size:  20px; padding-top: 10px; }
+  .break-job-time-panel i { font-size: 36px;  }
+  .time-toggle-controls { width: 100%; display: flex; }
+  /* dolna */
+  .bottom-box { min-height: 100px; height: 100%; padding-bottom: 90px; padding-top: 60px;}
+  .daily-checkbox { width:82%; }
+  .daily-checkbox header { height: 150px; width: 85%; }
+  #input-task-text { font-size: 12px; }
+  #daily-task-list li div { font-size: 19px; height: 50px; width: 10%; margin-left: auto;}
+  #daily-task-list li div span { margin: 1px; }
+  #daily-task-list li div span i { margin: 5px; }
+  #daily-task-list li { font-size: 14px; font-weight: 500; width: auto; }
+  .add-task-btn i{ font-size: 26px; }
+  #clear-tasks-btn { padding: 1px; font-size: 15px; }
+}
 
-@media screen and (max-width: 320px) and (min-width: 100px) {
-  .main-navigation li { font-size: 48px; }
-} 
+/* @media screen and (max-width: 320px) and (min-width: 100px) {
+  .main-navigation li {
+    font-size: 38px;
+  }
+  .bottom-box { min-height: 100px; height: 100%; padding-bottom: 90px; padding-top: 60px;}
+  .daily-checkbox { width:82%; }
+  .daily-checkbox header { height: 150px; width: 85%; }
+  #input-task-text { font-size: 10px; }
+  #daily-task-list li div { font-size: 19px; height: 50px; width: 10%; margin-right: 12px; margin-left: auto;}
+  #daily-task-list li div span { margin: 1px; }
+  #daily-task-list li div span i { margin: 5px; }
+  #daily-task-list li { font-size: 14px; font-weight: 500; width: auto; }
+  .add-task-btn i{ font-size: 26px; }
+  #clear-tasks-btn { padding: 1px; font-size: 15px; } */

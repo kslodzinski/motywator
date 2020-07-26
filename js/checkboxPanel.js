@@ -28,7 +28,6 @@ function checkInput(e){
       window.alert('Najpierw wprowadź zadanie do wykonania.' )
     }
     else{
-        error.classList.remove('show');
         listItems.push(item.value)
         localStorage.setItem('items',JSON.stringify(listItems))
         listMaker(item.value);
@@ -38,10 +37,15 @@ function checkInput(e){
 
 data.forEach(e=>{
     const li = document.createElement('li');
+    const divek = document.createElement('div');
     const span = document.createElement('span');
     span.innerHTML = '<i id="trash" class="fa fa-trash trash"></i>';
+    const span2 = document.createElement('span');
+    span2.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i>';
     li.textContent = e;
-    li.appendChild(span);
+    li.appendChild(divek);
+    divek.appendChild(span);
+    divek.appendChild(span2);
     lists.appendChild(li);
 
     span.addEventListener('click',e=>{
