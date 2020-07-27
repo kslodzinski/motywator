@@ -10,10 +10,6 @@ const modalOpenBtn = document.querySelector('.open-task-modal');
 const modalContent = document.querySelector('.to-do-list-form');
 const fullPageContainer = document.querySelector('.full-page-container');
 
-modalOpenBtn,addEventListener('click', function() {
-    modalContent.style.display = "flex";
-    fullPageContainer.classList.add("f-p-g-after");
-})
 
 // przyciski sterujace wyswietlana lista
 const toUrgentBtn = document.querySelector('#urgent-btn');

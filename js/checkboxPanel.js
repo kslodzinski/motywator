@@ -41,13 +41,14 @@ data.forEach(e=>{
     const span = document.createElement('span');
     span.innerHTML = '<i id="trash" class="fa fa-trash trash"></i>';
     const span2 = document.createElement('span');
-    span2.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i>';
+    span2.innerHTML = '<i class="fa fa-check check" aria-hidden="true"></i>';
     li.textContent = e;
     li.appendChild(divek);
     divek.appendChild(span);
     divek.appendChild(span2);
     lists.appendChild(li);
 
+    // usuwanie
     span.addEventListener('click',e=>{
         if(e.target.classList.contains('trash')){
             let text = e.target.parentElement.parentElement.textContent;
@@ -55,7 +56,19 @@ data.forEach(e=>{
             localStorage.setItem('items',JSON.stringify(listItems));
             li.remove();
             location.reload()
-        }
+        } 
+    })
+
+    // usuwanie
+    span2.addEventListener('click',e=>{
+        if(e.target.classList.contains('check')){
+            
+            let text2 = e.target.parentElement.parentElement.textContent;
+            listItems.splice(listItems.indexOf(text2),1);
+
+            li.innerHTML = "Zadanie wykonane";
+            
+        } 
     })
 })
 
