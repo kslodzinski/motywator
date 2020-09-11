@@ -3,14 +3,14 @@
 
 <head>
 
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 
     <!-- kluczowe informacjee                       -->
 
-    <title>Developer page.</title>
+    <title>Motivator page.</title>
     <meta name="author" content="Kevin Słodziński">
-    <meta name="description" content="Developer page">
-    <meta name="keywords" content="master, html, portfolio, kevin, javascript">
+    <meta name="description" content="Motivator page">
+    <meta name="keywords" content="master, html, motivator, php, kevin, javascript">
 
     <!-- ------------------------------------------ -->
 
@@ -23,27 +23,78 @@
 
     <!-- pliki stylow css                            -->
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- ------------------------------------------ -->
 
 <body>
 
-    <div class="container"></div>
+    <div class="container">
+
+        <!-- nawigacja po kątach -->
+        <div class="navigation">
+            <!-- panel logowanie -->
+            <div class="login-signup-link">
+                <a href="login-signup.php">
+                    <i class="fa fa-address-card" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- panel zadan -->
+        <div class="main-content">
+            <div class="eisenhover-tasks">
+
+                <!-- dodawanie zadania -->
+                <!-- przycisk -->
+                <div class="to-modal-add">
+                    <button type="button" class="open-add-modal">DODAWANIE ZADANIA</button>
+                </div>
 
 
-	<!-- DODATKOWE STYLE ? SKRYPTY ? ZALACZNIKI ? -->
+                <!-- przelaczanie pomiedzy kategoriani -->
+                <div class="category-holder">
+                    <div class="category category1">PILNE</div>
+                    <div class="category category2">WAŻNE</div>
+                    <div class="category category3">POZOSTAŁE</div>
+                </div>
 
-	   <script src="script.js"></script>
+                <!-- lista z zadaniami -->
+                <div class="category-list-holder">
+                    <div class="category-list category1-list">111111111111</div>
+                    <div class="category-list category2-list">2222222222</div>
+                    <div class="category-list category3-list">3333333333333333</div>
+                </div>
+            </div>
+        </div>
 
-	   <link
-	   href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500&family=Ubuntu+Condensed&display=swap"
-	   rel="stylesheet">
+        <!-- domyslnie ukryty div z formularzen -->
+        <div class="form-task-add">
+            <h3>Wpisz cos i wybierz kategorie</h3>
+            <form action="">
+                <input type="text">
+                <input type="radio" name="" id="category1">
+                <input type="radio" name="" id="category2">
+                <input type="radio" name="" id="category3">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
 
-   <script src="https://kit.fontawesome.com/5bbe1138ed.js" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </div>
 
-   <!-- ------------------------------------------ -->
+
+    <!-- DODATKOWE STYLE ? SKRYPTY ? ZALACZNIKI ? -->
+
+    <script src="js/eisenhoverTasks.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500&family=Ubuntu+Condensed&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/5bbe1138ed.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- ------------------------------------------ -->
 
 </body>
 
