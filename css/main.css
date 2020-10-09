@@ -9,13 +9,16 @@ body, html {
     color: white;
 }
 
-.container {
+.body-holder {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* display: none;   */
 }
+
+.body-holder-after { opacity: 0.1; }
 
 /* nawigacja */
 .naviation {
@@ -48,31 +51,6 @@ body, html {
     flex-direction: column;
 }
 
-/* sekcja dodawania */
-.to-modal-add {
-    width: 100%;
-    height: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.open-add-modal {
-    width: 320px;
-    height: 60px;
-    background-color: transparent;
-    border: 1px solid olive;
-    color: white;
-}
-
-/* pokaz / ukryj dodawanie */
-.form-task-add {
-    display: none; 
-    width: 90%;
-    height: 90%;
-    border: 1px solid olivedrab;
-}
-
 /* sekcja z wyborem kategorii */
 .category-holder {
     width: 100%;
@@ -93,3 +71,78 @@ body, html {
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* widocznosc listy z danej kategorii  */
+.urgent { display: flex; }
+.important { display: none; }
+.others { display: none;}
+
+/* sekcja dodawania */
+.to-modal-add {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.open-add-modal {
+    width: 320px;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid olive;
+    color: white;
+}
+
+/* pokaz / ukryj dodawanie */
+.form-add-task-holder {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;  
+}
+
+.form-add-task-holder h3 { text-align: center; }
+
+.form-task-add {
+    width: 600px;
+    height: 320px;
+    border: 1px solid olivedrab;
+}
+
+.form-task-add form {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center; 
+}
+
+.form-is-open {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* kategorie w formularzu */
+.form-category {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-category div { padding: 20px; }
+
+.form-category-active { border: 2px solid lime;  }
+
+.close-modal-btn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 25px;
+    font-size: 50px;
+}
+
+
