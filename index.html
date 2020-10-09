@@ -31,53 +31,64 @@
 
     <div class="container">
 
-        <!-- nawigacja po kątach -->
-        <div class="navigation">
-            <!-- panel logowanie -->
-            <div class="login-signup-link">
-                <a href="login-signup.php">
-                    <i class="fa fa-address-card" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
+        <div class="body-holder">
 
-        <!-- panel zadan -->
-        <div class="main-content">
-            <div class="eisenhover-tasks">
-
-                <!-- dodawanie zadania -->
-                <!-- przycisk -->
-                <div class="to-modal-add">
-                    <button type="button" class="open-add-modal">DODAWANIE ZADANIA</button>
-                </div>
-
-
-                <!-- przelaczanie pomiedzy kategoriani -->
-                <div class="category-holder">
-                    <div class="category category1">PILNE</div>
-                    <div class="category category2">WAŻNE</div>
-                    <div class="category category3">POZOSTAŁE</div>
-                </div>
-
-                <!-- lista z zadaniami -->
-                <div class="category-list-holder">
-                    <div class="category-list category1-list">111111111111</div>
-                    <div class="category-list category2-list">2222222222</div>
-                    <div class="category-list category3-list">3333333333333333</div>
+            <!-- nawigacja po kątach -->
+            <div class="navigation">
+                <!-- panel logowanie -->
+                <div class="login-signup-link">
+                    <a href="login-signup.php">
+                        <i class="fa fa-address-card" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
+
+            <!-- panel zadan -->
+            <div class="main-content">
+                <div class="eisenhover-tasks">
+
+                    <!-- dodawanie zadania -->
+                    <!-- przycisk -->
+                    <div class="to-modal-add">
+                        <button type="button" class="open-add-modal-btn">DODAWANIE ZADANIA</button>
+                    </div>
+
+                    <!-- przelaczanie pomiedzy kategoriani -->
+                    <div class="category-holder">
+                        <div class="category category1">PILNE</div>
+                        <div class="category category2">WAŻNE</div>
+                        <div class="category category3">POZOSTAŁE</div>
+                    </div>
+
+                    <!-- lista z zadaniami -->
+                    <div class="category-list-holder">
+                        <div class="category-list category1-list urgent">
+                            <ul class="items urgent-list" id="urgent-list">
+
+                            </ul>
+                        </div>
+                        <div class="category-list category2-list important"></div>
+                        <div class="category-list category3-list others"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <!-- domyslnie ukryty div z formularzen -->
-        <div class="form-task-add">
-            <h3>Wpisz cos i wybierz kategorie</h3>
-            <form action="">
-                <input type="text">
-                <input type="radio" name="" id="category1">
-                <input type="radio" name="" id="category2">
-                <input type="radio" name="" id="category3">
-                <input type="submit" value="Submit">
-            </form>
+        <div class="form-add-task-holder">
+            <div class="form-task-add">
+                <h3>Wpisz cos i wybierz kategorie</h3>
+                <form action="">
+                    <input type="text" class="add-task-value" name="item">
+                    <div class="form-category">
+                        <div name="" class="in-form-category1"><p>Kategoria I</p></div>
+                        <div name="" class="in-form-category2"><p>Kategoria II</p></div>
+                        <div name="" class="in-form-category3 form-category-active"><p>Kategoria III</p></div>
+                    </div>
+                    <input type="submit" value="Submit" class="add-task-btn">
+                </form>
+            </div>
         </div>
 
     </div>
