@@ -1,10 +1,10 @@
 const toModalAdd = document.querySelector('.open-add-modal-btn');
-const bodyHolder = document.querySelector('.body-holder');
+const bodyHolder = document.querySelector('.body-holder'); // cala strona z wylaczeniem formularza
 const formTaskHolder = document.querySelector('.form-add-task-holder'); //caly modal dodawnia
 const addTaskBtn = document.querySelector('.add-task-btn');
 
 // otwieranie modala dodawania zadan
-toModalAdd.addEventListener('click', function() {
+toModalAdd.addEventListener('click', function () {
     formTaskHolder.classList.add('form-is-open');
     bodyHolder.classList.add('body-holder-after');
 
@@ -17,7 +17,7 @@ toModalAdd.addEventListener('click', function() {
     formTaskHolder.appendChild(closeModalBtn);
 
     // zamykanie modala
-    closeModalBtn.addEventListener ('click', function() {
+    closeModalBtn.addEventListener('click', function () {
         formTaskHolder.classList.remove('form-is-open');
         bodyHolder.classList.remove('body-holder-after');
     });
@@ -25,22 +25,48 @@ toModalAdd.addEventListener('click', function() {
 });
 
 // dodawanie taskow
-const formTaskAdd = document.querySelector('.form-task-add');
-const urgentList = document.querySelector('#urgent-list');
-const parsingLocalStorageItems = JSON.parse(localStorage.getItem('urgent-list'))  || [];
 
-function listItemsFn(e) {
-    e.preventDefault();
-    const itemText = (this.querySelector('[name=item]')).value;
-    const item = {
-        itemText,
-        checkedOff: false,
-        deleted: false
+const todoInput = document.querySelector('.todo-input'); // miejsce na wartosc do dodania
+const mainForm = document.querySelector('.main-form'); // caly formularz
+const todoUrgentList = document.querySelector('.todo-list-urgent'); //pilne zadania
+const todoImportantList = document.querySelector('.todo-list-important'); //wazne zadania
+const todoOthersList = document.querySelector('.todo-list-others'); //inne zadania
+
+let urgentTodos = [];
+let importantTodos = [];
+let othersTodos = [];
+
+function addTodo(item) {
+    if (item !== '') {
+        const todo = {
+            id: Date.now(),
+            name: item,
+            completed: false
+        };
+    }
+
+    const urgentHolder = document.querySelector('.urgent');
+    const importantHolder = document.querySelector('.important');
+    const othersHolder = document.querySelector('.others');
+
+    if (urgentHolder.classList.contains('list-active')) {
+        urgentTodos.push(todo);
+        renderTodos(urgentTodos);
+        todoInput.value = '';
+    } else if (importantHolder.classList.contains('list-active')) {
+        importantTodos.push(todo);
+        renderTodos(importantTodos);
+        todoInput.value = '';
+    } else if (othersHolder.classList.contains('list-active')) {
+        othersTodos.push(todo);
+        renderTodos(othersTodos);
+        todoInput.value = '';
     };
 };
 
-addTaskBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    let addTaskValue = document.querySelector('.add-task-value').value;
-    console.log(addTaskValue);
-});
+
+
+
+
+
+

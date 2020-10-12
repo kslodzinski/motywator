@@ -73,9 +73,8 @@ body, html {
 }
 
 /* widocznosc listy z danej kategorii  */
-.urgent { display: flex; }
-.important { display: none; }
-.others { display: none;}
+.list-active { display: flex; }
+.list-hide { display: none; }
 
 /* sekcja dodawania */
 .to-modal-add {
@@ -146,3 +145,13 @@ body, html {
 }
 
 
+/* 
+
+
+
+
+0*0 */
+
+.checked { 
+  text-decoration: line-through;
+}

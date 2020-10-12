@@ -62,13 +62,36 @@
 
                     <!-- lista z zadaniami -->
                     <div class="category-list-holder">
-                        <div class="category-list category1-list urgent">
-                            <ul class="items urgent-list" id="urgent-list">
-
+                        <div class="category-list category1-list urgent list-active">
+                            <ul class="todo-list-urgent">
+                                <!-- dummy item -->
+                                <li class="item" data-key="1594003133171">
+                                  <input class="checkbox" type="checkbox">
+                                  Go to Gym
+                                  <button class="delete-button">X</button>
+                                </li>
                             </ul>
                         </div>
-                        <div class="category-list category2-list important"></div>
-                        <div class="category-list category3-list others"></div>
+                        <div class="category-list category2-list important list-hide">
+                            <ul class="todo-list-important">
+                                <!-- dummy item -->
+                                <li class="item" data-key="1594003133171">
+                                  <input class="checkbox" type="checkbox">
+                                  Go to Gym
+                                  <button class="delete-button">X</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="category-list category3-list others list-hide">
+                            <ul class="todo-list-others">
+                                <!-- dummy item -->
+                                <li class="item" data-key="1594003133171">
+                                  <input class="checkbox" type="checkbox">
+                                  Go to Gym
+                                  <button class="delete-button">X</button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -79,8 +102,8 @@
         <div class="form-add-task-holder">
             <div class="form-task-add">
                 <h3>Wpisz cos i wybierz kategorie</h3>
-                <form action="">
-                    <input type="text" class="add-task-value" name="item">
+                <form action="" class="main-form">
+                    <input type="text" class="todo-input" name="item">
                     <div class="form-category">
                         <div name="" class="in-form-category1"><p>Kategoria I</p></div>
                         <div name="" class="in-form-category2"><p>Kategoria II</p></div>
