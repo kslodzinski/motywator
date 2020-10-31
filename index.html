@@ -31,83 +31,101 @@
 
     <div class="container">
 
-        <div class="body-holder">
+        <!-- nawigacja po kątach -->
+        <div class="navigation">
+            <!-- panel logowanie -->
+            <div class="login-signup-link">
+                <a href="login-signup.php">
+                    <i class="fa fa-address-card" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
 
-            <!-- nawigacja po kątach -->
-            <div class="navigation">
-                <!-- panel logowanie -->
-                <div class="login-signup-link">
-                    <a href="login-signup.php">
-                        <i class="fa fa-address-card" aria-hidden="true"></i>
-                    </a>
-                </div>
+        <!-- panel zadan -->
+        <div class="task-panel">
+
+            <!-- open modal button -->
+            
+                <button type="button" class="open-modal-btn">DODAJ ZADANIE</button>
+           
+
+            <!-- wybor kategorii -->
+            <div class="cat-select">
+                <div class="cat1 cat-active">KATEGORIA I</div>
+                <div class="cat2">KATEGORIA II</div>
+                <div class="cat3">KATEGORIA III</div>
             </div>
 
-            <!-- panel zadan -->
-            <div class="main-content">
-                <div class="eisenhover-tasks">
-
-                    <!-- dodawanie zadania -->
-                    <!-- przycisk -->
-                    <div class="to-modal-add">
-                        <button type="button" class="open-add-modal-btn">DODAWANIE ZADANIA</button>
-                    </div>
-
-                    <!-- przelaczanie pomiedzy kategoriani -->
-                    <div class="category-holder">
-                        <div class="category category1">PILNE</div>
-                        <div class="category category2">WAŻNE</div>
-                        <div class="category category3">POZOSTAŁE</div>
-                    </div>
-
-                    <!-- lista z zadaniami -->
-                    <div class="category-list-holder">
-                        <div class="category-list category1-list urgent list-active">
-                            <ul class="todo-list-urgent">
-                                <!-- dummy item -->
-                                <li class="item" data-key="1594003133171">
-                                  <input class="checkbox" type="checkbox">
-                                  Go to Gym
-                                  <button class="delete-button">X</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="category-list category2-list important list-hide">
-                            <ul class="todo-list-important">
-                                <!-- dummy item -->
-                                <li class="item" data-key="1594003133171">
-                                  <input class="checkbox" type="checkbox">
-                                  Go to Gym
-                                  <button class="delete-button">X</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="category-list category3-list others list-hide">
-                            <ul class="todo-list-others">
-                                <!-- dummy item -->
-                                <li class="item" data-key="1594003133171">
-                                  <input class="checkbox" type="checkbox">
-                                  Go to Gym
-                                  <button class="delete-button">X</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <!-- listy z zadaniami -->
+            <!-- KAT 1 -->
+            <div class="cat1-panel">
+                <ul class="cat1-list">
+                    <!-- dummy item -->
+                    <li class="item" data-key="1594003133171">
+                        <input class="checkbox" type="checkbox">
+                        Go to Gym
+                        <button class="delete-button">X</button>
+                    </li>
+                     <!-- dummy item -->
+                     <li class="item" data-key="1594003133171">
+                        <input class="checkbox" type="checkbox">
+                        Go to Gym
+                        <button class="delete-button">X</button>
+                    </li>
+                     <!-- dummy item -->
+                     <li class="item" data-key="1594003133171">
+                        <input class="checkbox" type="checkbox">
+                        Go to Gym
+                        <button class="delete-button">X</button>
+                    </li>
+                     <!-- dummy item -->
+                     <li class="item" data-key="1594003133171">
+                        <input class="checkbox" type="checkbox">
+                        Go to Gym
+                        <button class="delete-button">X</button>
+                    </li>
+                </ul>
             </div>
-
+            <!-- KAT 2 -->
+            <div class="cat2-panel">
+                <ul class="cat2-list">
+                    <!-- dummy item -->
+                    <li class="item" data-key="1594003133171">
+                        <input class="checkbox" type="checkbox">
+                        Go to Gym
+                        <button class="delete-button">X</button>
+                    </li>
+                </ul>
+            </div>
+            <!-- KAT 3 -->
+            <div class="cat3-panel">
+                <ul class="cat3-list">
+                    <!-- dummy item -->
+                    <li class="item" data-key="1594003133171">
+                        <input class="checkbox" type="checkbox">
+                        Go to Gym
+                        <button class="delete-button">X</button>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <!-- domyslnie ukryty div z formularzen -->
-        <div class="form-add-task-holder">
+        <div class="add-task-holder">
             <div class="form-task-add">
                 <h3>Wpisz cos i wybierz kategorie</h3>
                 <form action="" class="main-form">
                     <input type="text" class="todo-input" name="item">
-                    <div class="form-category">
-                        <div name="" class="in-form-category1"><p>Kategoria I</p></div>
-                        <div name="" class="in-form-category2"><p>Kategoria II</p></div>
-                        <div name="" class="in-form-category3 form-category-active"><p>Kategoria III</p></div>
+                    <div class="todo-cat">
+                        <div name="" class="todo-cat1">
+                            <p>Kategoria I</p>
+                        </div>
+                        <div name="" class="todo-cat2">
+                            <p>Kategoria II</p>
+                        </div>
+                        <div name="" class="todo-cat3">
+                            <p>Kategoria III</p>
+                        </div>
                     </div>
                     <input type="submit" value="Submit" class="add-task-btn">
                 </form>
@@ -119,7 +137,7 @@
 
     <!-- DODATKOWE STYLE ? SKRYPTY ? ZALACZNIKI ? -->
 
-    <script src="js/eisenhoverTasks.js"></script>
+    <script src="js/tasks.js"></script>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500&family=Ubuntu+Condensed&display=swap"
